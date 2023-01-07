@@ -1,6 +1,11 @@
 body{
     background-color:rgb(117, 197, 206);
     margin:0;
+    
+}
+a{
+  text-decoration: none;
+  color: #666666;
 }
 #header{
     display:flex;
@@ -27,7 +32,59 @@ body{
 li{
     font-size: 1.3rem;
 }
+.main-first{
+  margin:auto;
+  font-size:1.5rem;
+  width:75%;
+  text-align: center;
+}
+.main-first-flex{
+  display:flex;
+  justify-content: space-around;
+}
+.main-first-flex div {
+  width:50%;
+}
+.main-second{
+  width:100%;
+  background-color:white;
+}
+.main-second-flex{
+  margin:auto;
+  font-size:1.5rem;
+  text-align: center;
+  display:flex;
+  justify-content: space-around;
+  margin-top:4em;
+  width:75%;
+}
+.main-second-competences{
+  width:50%;
+}
+.main-second-presentation{
+  width:50%;
+}
 
+.main-second-competences-list{
+  list-style-type: none;
+  text-align:left;
+}
+.container-pb{
+  width:100%;
+  background-color:grey;
+  height:40px;
+  border-radius:5px;
+  display:flex;
+  align-items: center;
+  margin:1em 0 1em 0;
+}
+.pb{
+  background-color: lightblue;
+  height:40px;
+  border-radius:5px;
+  width:100%;
+  transition: width 2s, background-color 2s;
+}
 
 @media screen and (max-width: 600px) {
     #header-burger{

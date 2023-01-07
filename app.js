@@ -1,11 +1,26 @@
 /* Sélection des éléments HTML */
-let link = document.getElementById('link')
-let burger = document.getElementById('burger')
-let ul = document.querySelector('ul')
+const link = document.getElementById('link')
+const burger = document.getElementById('burger')
+const ul = document.querySelector('ul')
+// let progress = document.querySelector('.check-competences');
+// progress.addEventListener('click',pbclick)
 
-/* gestionnaire d'événement sur le a#link pour venir changer l'attribution de la classe .open à la ul et au span#burger */
 link.addEventListener('click', function(e) {
   e.preventDefault()
   burger.classList.toggle('open')
   ul.classList.toggle('open')
 })
+
+// function pbclick(e){
+//   var elem = document.getElementById("pb-rigueur");
+//   var width = 1;
+//   var id = setInterval(frame, 10);
+//   function frame() {
+//     if (width >= 100) {
+//       clearInterval(id);
+//     } else {
+//       width++;
+//       elem.style.width = width + '%';
+// }
+//   }
+// }
