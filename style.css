@@ -78,13 +78,22 @@ li{
   align-items: center;
   margin:1em 0 1em 0;
 }
+@keyframes pb{
+  from{width:0%;}
+  to{width:100%;}
+}
 .pb{
   background-color: lightblue;
   height:40px;
   border-radius:5px;
-  width:100%;
-  transition: width 2s, background-color 2s;
+  width:0%;
+  animation-name:pb;
+  animation-duration: 2s;
+  animation-delay:1s;
+  animation-iteration-count: 1;
+
 }
+
 
 @media screen and (max-width: 600px) {
     #header-burger{
