@@ -1,10 +1,14 @@
 <!DOCTYPE html>
-<html lang="eng">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Contact</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Mon C.V</title>
 </head>
 <body>
     <header>
@@ -21,7 +25,68 @@
                         <li><a href="">Contact</a></li>
                     </ul>
                 </nav>
+        </div>
+    </header>
+    <main>
+        <h2 id="contact-title">Vous souhaitez me contacter</h2>
+        <div class="contact-flex">
+            <div class="Card_card">
+                <div class="Card_up">
+                    <div class="Card_text">
+                        <h2>Le Goff</h2>
+                        <p>Maxime</p>
+                    </div>
+                    <div class="Card_add">
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                </div>
+                    <div class="Card_down">
+                        <div>
+                            <p>Age</p>
+                            <p>25</p>
+                        </div>
+                        <div>
+                            <p>Profession</p>
+                            <p>Développeur Web</p>
+                        </div>
+                    </div>
+                    <div class="Card_back">
+                        <p>Suivez moi sur :</p>
+                        <a href=""><i class="fa-brands fa-github"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                
             </div>
-        </header>
-</body>
+            <div class="hero">
+                <form>
+                    <div class="input-group">
+                        <input type="text" id="name" required>
+                        <label for="name" >Votre Nom</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="email" required>
+                        <label for="email" >Votre Email</label>
+                    </div>                    
+                    <div class="input-group">
+                        <textarea id="message" rows="8" required></textarea>
+                        <label for="message" >Votre Message</label>
+                    </div>
+                        <button type="submit">Envoyer</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+            <a href="https://www.linkedin.com/in/maxime-legoff/">
+                <span><i class="fa-brands fa-linkedin-in"></i> Linkedin</span>
+            </a>
+            <a href="https://github.com/Maxime-Le-Goff">
+                <span><i class="fa-brands fa-github"></i> Github</span>
+            </a>
+        </footer>
+        <script src="Contact.js"></script>
+
+    </body>
+
 </html>
+
