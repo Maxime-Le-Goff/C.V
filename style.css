@@ -1,5 +1,5 @@
-html{
-  width:100%;
+*{
+  box-sizing: border-box;
 }
 body{
   margin:0;
@@ -8,10 +8,23 @@ body{
 a{
   text-decoration: none;
   color: #666666;
+  position:relative;
 }
-a:hover{
-  font-weight:bold;
-  color:black;
+nav a:after{
+  content:"";
+  position:absolute;
+  background-color:#666666;
+  height:3px;
+  width:0;
+  left:0;
+  bottom:-10px;
+  transition:0.3s;
+}
+nav a:hover{
+  color:#000;
+}
+nav a:hover:after{
+  width:100%;
 }
 #header{
   display:flex;
@@ -264,79 +277,114 @@ footer{
 footer {
   display:flex;
   flex-direction: column;
+  margin:0;
 }
-/*Contact form*/
+/******************************Contact form*****************************/
 main{
   background-color:rgba(117, 197, 206,0.3);
 }
-.contact-flex{
-  display:flex;
-  justify-content: center;
-}
-#contact-title{
-  text-align:center;
-  font-size:2em;
-  padding:2em;
-  text-transform: uppercase;
-  color:#666666;
-
+.contact-container{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 3em 0;
 }
 
-.hero{
-  width:50%;
-  height:100vh;
-  display:flex;
-  justify-content: center;
-  padding-top: 6em;
+.contact-box{
+	max-width: 850px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: #fff;
+	box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
 }
-form{
-  width:90%;
-  max-width:600px;
+
+.left{
+	background: url("https://preview.redd.it/rwl5o5xm2tv71.jpg?width=1500&format=pjpg&auto=webp&v=enabled&s=a20f7372f386e85230b9c53cba4bbbbce460e649") no-repeat center;
+	background-size: cover;
+	height: 100%;
 }
-.input-group{
-  margin-bottom:30px;
-  position:relative;
+
+.right{
+	padding: 25px 40px;
 }
-input,textarea{
-  width:100%;
-  padding:10px;
-  outline:0;
-  border:2px solid #000;
-  color:#000;
-  background:transparent;
-  font-size:15px;
-  border-radius: 10px;
+
+.right h2{
+	position: relative;
+	padding: 0 0 10px;
+	margin-bottom: 10px;
 }
-label{
-  height:100%;
-  position:absolute;
-  left:0;
-  top:0;
-  padding:10px;
-  color:#000;
-  cursor:text;
-  transition:0.2s;
+
+.right h2:after{
+	content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 50px;
+    border-radius: 2px;
+    background-color: rgb(117, 197, 206);
 }
-button{
-  padding:10px 0;
-  color:#000;
-  outline:none;
-  background:transparent;
-  border-radius: 10px;
-  width:100%;
-  cursor:pointer;
+
+.field{
+	width: 100%;
+	border: 2px solid rgba(0, 0, 0, 0);
+	outline: none;
+	background-color: rgba(230, 230, 230, 0.6);
+	padding: 0.5rem 1rem;
+	font-size: 1.1rem;
+	margin-bottom: 22px;
+	transition: .3s;
 }
-input:focus~label,
-input:valid~label,
-textarea:focus~label,
-textarea:valid~label{
-  top:-35px;
-  font-size:14px;
+
+.field:hover{
+	background-color: rgba(0, 0, 0, 0.1);
 }
-/*Card Contact form*/
+
+textarea{
+	min-height: 150px;
+}
+
+.btn{
+	width: 100%;
+	padding: 0.5rem 1rem;
+	background-color: rgb(117, 197, 206);
+	color: #fff;
+	font-size: 1.1rem;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	transition: .3s;
+}
+
+.btn:hover{
+    background-color: darkcyan;
+}
+
+.field:focus{
+    border: 2px solid rgba(30,85,250,0.47);
+    background-color: #fff;
+}
+
+@media screen and (max-width: 880px){
+	.contact-box{
+		grid-template-columns: 1fr;
+	}
+	.left{
+		height: 200px;
+	}
+}
+
+/******************************Card Contact*************************/
 .Card_card{
-  width:400px;
-  height:615px;
+  width:320px;
+  height:550px;
   border-radius:30px;
   box-shadow:0px 20px 70px 0px rgba(0,0,0,0.21);
   position: relative;
@@ -398,7 +446,7 @@ textarea:valid~label{
   background-color: #ed145b;
   box-shadow: 0px 5px 24px 0px rgba(0,0,0,0.43);
   position:absolute;
-  top: 392px;
+  top: 390px;
   left:0;
   right: 0;
   margin:auto;
@@ -416,7 +464,7 @@ textarea:valid~label{
   line-height:88px;
 }
 .Card_card .Card_down{
-  background-size: #fff;
+  /* background-size: #fff; */
   position:absolute;
   bottom:0px;
   width:100%;
@@ -425,7 +473,7 @@ textarea:valid~label{
   transition: 0.5s ease-in-out;
 }
 .Card_card .Card_down div{
-  width:50%;
+  width:49%;
   float:left;
   text-align: center;
   margin-top: 60px;
@@ -436,7 +484,6 @@ textarea:valid~label{
   margin-top:35px;
 }
 .Card_card .Card_down div p:first-of-type{
-  color:#68818c;
   margin-bottom: 5px;
 }
 .Card_card .Card_down div p:last-of-type{
