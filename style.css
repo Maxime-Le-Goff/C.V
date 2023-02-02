@@ -305,7 +305,7 @@ footer
 {
   height:4rem;
   border-radius: 40px;
-  background-color:#03a9f4;
+  background-color:lightblue;
 }
 .content div .bar h1
 {
@@ -319,7 +319,7 @@ footer
 {
   position:absolute;
   left:30px;
-  color:#fff;
+  color:#334750;
   font-weight:600;
   font-size:1.5rem;
   margin-right:1rem;
@@ -335,9 +335,9 @@ footer
   left:0;
   height:100%;
   width:100%;
-  background-color:#03a9f4;
+  background-color:lightblue;
   border-left:2px solid white;
-  animation:animate 4s steps(16) infinite;
+  animation:animate 2.5s steps(14) infinite;
 }
 @keyframes animate
 {
@@ -382,8 +382,9 @@ footer
 
 .left
 {
-	background: url("https://preview.redd.it/rwl5o5xm2tv71.jpg?width=1500&format=pjpg&auto=webp&v=enabled&s=a20f7372f386e85230b9c53cba4bbbbce460e649") no-repeat center;
+	background-image: url("/Practice/C.V/IMG_0015.jpg");
 	background-size: cover;
+  background-position:center;
 	height: 100%;
 }
 
@@ -497,7 +498,7 @@ textarea
   position:absolute;
   width:100%;
   height:437px;
-  background-image: url('/IMG_0009.jpeg');
+  background-image: url('/Practice/C.V/IMG_0015.jpg');
   background-position:top;
   background-size: cover;
   z-index:3;
@@ -515,8 +516,8 @@ textarea
   top:319px;
   left:0;
   right:0;
-  color:#f1f7f9;
-  text-shadow:0 0 10px #000;
+  color:#334750;
+  text-transform: uppercase;
   transition:0.5s ease-in-out;
 }
 .Card_on .Card_up .Card_text
@@ -538,7 +539,7 @@ textarea
 .Card_add
 {
   border-radius: 50%;
-  background-color: #ed145b;
+  background-color: lightblue;
   box-shadow: 0px 5px 24px 0px rgba(0,0,0,0.43);
   position:absolute;
   top: 390px;
@@ -616,6 +617,15 @@ textarea
 {
   color:#1da1f2;
   border:2px solid #1da1f2;
+}
+.Card_card .Card_back a:nth-of-type(3) i
+{
+  color:red;
+  border: 2px solid red;
+}
+.Card_back p 
+{
+  margin-bottom:10px;
 }
 .Card_on .Card_down
 {
@@ -885,5 +895,60 @@ textarea
   .skills .box 
   {
     grid-template-columns:repeat(1,1fr) ;
+  }
+}
+
+/**********************************Slider***********************************/
+.slider_container
+{
+  max-width:300px;
+  overflow:hidden;
+  height:300px;
+  margin-top:5em;
+}
+.slider 
+{
+  display:flex;
+  flex-shrink: 0;
+  animation: slider 12s alternate infinite;
+}
+.slider_img
+{
+  max-width:300px;
+  height:300px; 
+  object-fit:cover
+}
+
+@keyframes slider 
+{
+  0%,
+  12% 
+  {
+    transform: translateX(0);
+  }
+  17%,
+  29% 
+  {
+    transform: translateX(-100%);
+  }
+  34%,
+  46% 
+  {
+    transform: translateX(-200%);
+  }
+  51%,
+  63% 
+  {
+    transform: translateX(-300%);
+  }
+  68%,
+  80%
+  {
+    transform: translateX(-400%);
+  }
+  85%,
+  100%
+  {
+    transform: translateX(-500%);
   }
 }
