@@ -26,16 +26,16 @@ const text = document.querySelector(".sec-text");
 console.log(text);
 const textLoad = () => {
   setTimeout(() => {
-    text.textContent = 'Rigoureux';
+    text.textContent = 'RIGOUREUX';
   },0);
   setTimeout(() => {
-    text.textContent = 'Passionné';
+    text.textContent = 'PASSIONNE';
   },4000);
   setTimeout(() => {
-    text.textContent = 'Joyeux';
+    text.textContent = 'JOYEUX';
   },8000);
   setTimeout(() => {
-    text.textContent = 'Bonne Humeur';
+    text.textContent = 'LOREM';
   },12000);
 }
 textLoad();
