@@ -30,16 +30,16 @@ const textLoad = () => {
   },0);
   setTimeout(() => {
     text.textContent = 'PASSIONNE';
-  },2500);
+  },3000);
   setTimeout(() => {
     text.textContent = 'JOYEUX';
-  },5000);
+  },6000);
   setTimeout(() => {
     text.textContent = 'LOREM';
-  },7500);
+  },9000);
 }
 textLoad();
-setInterval(textLoad,10000);
+setInterval(textLoad,12000);
 
 const card = document.querySelector('.Card_card');
 const itemCard = document.querySelector('.Card_add i');
