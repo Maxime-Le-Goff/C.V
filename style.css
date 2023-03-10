@@ -112,9 +112,11 @@ nav li
 }
 .main-first-flex a:hover
 {
-  background-color:rgb(0, 49, 71);
-  color:white;
+  /* background-color:rgb(0, 49, 71); */
+  /* color:white; */
   transform:scale(1.08);
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  border-radius: 10px;
 }
 .main-first-flex h4 
 {
@@ -187,89 +189,15 @@ nav li
 .main-third
 {
   display:flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  margin-bottom: 6em;
+}
+.main-third h2 
+{
+  align-self:center;
 }
 
 
-@media screen and (max-width: 600px) {
-    #header-burger
-    {
-      display:flex;
-      justify-content: flex-end;
-    }
-    #burger 
-    {
-      width: 30px;
-      height: 2px;
-      background: black;
-      display: inline-block;
-      position: relative;
-    }
-      #burger::before,
-      #burger::after 
-      {
-        content: "";
-        width: 30px;
-        height: 2px;
-        background: black;
-        display: inline-block;
-        position: absolute;
-        transform-origin: center;
-        transition: all 0.3s ease;
-      }
-      #burger::before 
-      {
-        top: -7px;
-      }
-      #burger::after 
-      {
-        top: 7px;
-      }
-      
-      #burger.open 
-      {
-        background: transparent;
-      }
-      #burger.open::before 
-      {
-        transform: rotate(45deg);
-        top: 0;
-      }
-      #burger.open::after 
-      {
-        transform: rotate(-45deg);
-        top: 0;
-      }
-      
-      .navbar 
-      {
-        background: #ffdcd1;
-        position: absolute;
-        width: 100%;
-        left: 0;
-        top: 100%;
-        padding: 10px 0;
-        transform: scaleY(0);
-        transform-origin: center top;
-        transition: all 0.3s ease;
-        flex-direction: column;
-        margin-top:0;
-      }
-
-      .navbar.open 
-      {
-        transform: scaleY(1);
-      }
-      .navbar li 
-      {
-        text-align: center;
-      }
-      header 
-      {
-        position:relative;
-        max-width:600px;
-      }
-}
 /*Compétences*/
 
 .container
@@ -339,7 +267,7 @@ nav li
 }
 @keyframes animate
 {
-  40%,60%{
+  40%, 60%{
     left:100%;
   }
   100%{
@@ -494,57 +422,7 @@ textarea
     background-color: #fff;
 }
 
-@media screen and (max-width: 880px)
-{
-	.contact-box{
-		grid-template-columns: 1fr;
-	}
-	.left{
-		height: 200px;
-	}
-  .main-second
-  {
-    flex-direction:column;
-  }
-  .main-second-card
-  {
-    width:100%;
-  }
-  .main-second-competences
-  {
-    width:100%;
-  }
-  .main-first-flex {
-    flex-direction:column;
-  }
-  .main-first-flex a 
-  {
-    width:100%;
-    background-color:#003147;
-    color:white;
-    margin:0.2em;
-  }
-}
 
-@media screen and (max-width: 600px)
-{
-  .main-first-flex 
-  {
-    display:none;
-  }
-  .main-second 
-  {
-    padding:0;
-  }
-}
-
-  @media screen and (max-width: 500px)
-{
-  .Card_card
-  {
-    width:220px;
-  }
-}
 
 
 /******************************Card *************************/
@@ -943,40 +821,6 @@ textarea
   width:20px;
   margin:0 10px;
 }
-@media(max-width:1000px)
-{
-  .parcours-container
-  {
-    margin:10px;
-    grid-template-columns: repeat(1,1fr);
-  }
-  .interest ul 
-  {
-    grid-template-columns: repeat(2,1fr);
-
-  }
-}
-@media(max-width:600px)
-{
-  .about .box
-  {
-    flex-direction:column;
-  }
-  .about .box .year_company 
-  {
-    margin-bottom:5px;
-  }
-  .interest ul 
-  {
-    grid-template-columns: repeat(1,1fr);
-
-  }
-  .skills .box 
-  {
-    grid-template-columns:repeat(1,1fr) ;
-  }
-}
-
 /**********************************Slider***********************************/
 .slider_container
 {
@@ -1029,4 +873,167 @@ textarea
   {
     transform: translateX(-500%);
   }
+}
+@media(max-width:1000px)
+{
+  .parcours-container
+  {
+    margin:10px;
+    grid-template-columns: repeat(1,1fr);
+  }
+  .interest ul 
+  {
+    grid-template-columns: repeat(2,1fr);
+
+  }
+}
+
+@media screen and (max-width: 880px)
+{
+  .main-second
+  {
+    flex-direction:column;
+  }
+  .main-second-card
+  {
+    width:100%;
+  }
+  .main-second-competences
+  {
+    width:100%;
+  }
+  .main-first-flex {
+    flex-direction:column;
+  }
+  .main-first-flex a 
+  {
+    width:100%;
+    background-color:#003147;
+    color:white;
+    margin:0.2em;
+  }
+}
+@media screen and (min-width:600px)
+{
+  .topnav 
+  {
+    display:none;
+  }
+}
+@media (max-width: 600px) {
+    .navbar
+    {
+      display:none;
+    }
+    .navbar li 
+    {
+      text-align: center;
+    }
+    header 
+    {
+      position:relative;
+      max-width:600px;
+    }
+    .main-first-flex 
+    {
+      display:none;
+    }
+    .main-second 
+    {
+       padding:0;
+    }
+    .main-third{
+      display:flex;
+      flex-wrap: wrap;
+      text-align:center;
+      margin-top:20px;
+    }
+    .slider_container
+    {
+      max-width:250px ;
+      height: 250px ;
+      margin-top: 20px; 
+    }
+    .slider_img
+    {
+      max-width:250px;
+      height:250px;
+    }
+    .about .box
+    {
+      flex-direction:column;
+    }
+    .about .box .year_company 
+    {
+      margin-bottom:5px;
+    }
+    .interest ul 
+    {
+      grid-template-columns: repeat(1,1fr);
+    }
+    .skills .box 
+    {
+      grid-template-columns:repeat(1,1fr) ;
+    }
+  }
+  
+  @media (max-width: 700px) {
+    .contact-box{
+      grid-template-columns: 1fr;
+    }
+    .contact-box .left 
+    {
+      display:none;
+    }
+}
+
+@media (max-width: 500px) {
+
+  .bar h1 {
+    display:none;
+  }
+  .Card_card
+  {
+   width:90%;
+  }
+  footer
+  {
+    flex-wrap: wrap;
+  }
+}
+/* Style the navigation menu */
+.topnav {
+  overflow: hidden;
+  background-color: #003147;
+  position: relative;
+  box-shadow: 0 29px 52px rgba(0,0,0,0.40), 0 25px 16px rgba(0,0,0,0.20);
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
+  display: none;
+}
+
+/* Style navigation menu links */
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Style the hamburger menu */
+.topnav a.icon {
+  background: #003147;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+
+/* Style the active link (or home/logo) */
+.active {
+  background-color: #003147;
+  color: white;
 }
