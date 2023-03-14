@@ -1,4 +1,6 @@
-
+<?php 
+    require "templates/header.php"
+?>
     <main class="main_home">
         <section class="main-first">
             <h3 class="main_title">Site C.V de Maxime LE GOFF</h3>
@@ -41,7 +43,7 @@
                                 <a href="https://github.com/Maxime-Le-Goff" target="_blank"><i class="fa-brands fa-github"></i></a>
                                 <a href="https://www.linkedin.com/in/maxime-legoff/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                                 <p>C.V en version PDF :</p>
-                                <a href="Copie de CV.pdf" target="_blank"><i class="fa-solid fa-file-pdf"></i></a>
+                                <a href="resources/pictures/Copie de CV.pdf" target="_blank"><i class="fa-solid fa-file-pdf"></i></a>
                             </div>
                         
                     </div>
@@ -88,24 +90,28 @@
             <h2 class="title2">Différentes Technologies maitrisées : </h2>
             <div class="slider_container">
                 <div class="slider">
-                    <img class="slider_img" src="symfony.png">
+                    <img class="slider_img" src="resources/pictures/symfony.png">
                 
-                    <img class="slider_img" src="php-logo.png">
+                    <img class="slider_img" src="resources/pictures/php-logo.png">
                 
-                    <img class="slider_img" src="js.png">
+                    <img class="slider_img" src="resources/pictures/js.png">
                
-                    <img class="slider_img" src="css.png">
+                    <img class="slider_img" src="resources/pictures/css.png">
                
-                    <img class="slider_img" src="html.png">
+                    <img class="slider_img" src="resources/pictures/html.png">
                
-                    <img class="slider_img" src="sql.jpg">
+                    <img class="slider_img" src="resources/pictures/sql.jpg">
                 </div>
             </div>
         </section>
     </main>
 
+    <?php 
+    require "templates/footer.php"
+    ?>
+<script src="resources/js/app.js"></script>
+<script src="resources/js/home.js"></script>
 
-<script src="app.js"></script>
 
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="resources/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Poppins&display=swap" rel="stylesheet">
@@ -27,11 +27,11 @@
                 </nav>
 
                 <div class="topnav">
-                <a href="home.html" class="active">M</a>
+                <a href="index.php" class="active">M</a>
                 <div id="myLinks">
-                    <a href="home.html">Accueil</a>
-                    <a href="Parcours.html">Parcours</a>
-                    <a href="Contact.html">Contact</a>
+                    <a href="index.php">Accueil</a>
+                    <a href="Parcours.php">Parcours</a>
+                    <a href="Contact.php">Contact</a>
                 </div>
                 <a href="javascript:void(0);" class="icon" onclick="Burger()">
                     <i class="fa fa-bars"></i>

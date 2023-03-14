@@ -1,38 +1,12 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Poppins&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Mon C.V</title>
-</head>
-<body>
-    <header>
-        <div id="header">
-            <div id="header-left">
-                <h1 id="header-left-name">Le Goff Maxime</h1>
-                <h2 id="header-left-job">Développeur Web</h2>
-            </div>
-                <nav>
-                    <a id="link" href="#"><span id="burger"></span></a>
-                    <ul class="navbar">
-                        <li><a href="home.html">Accueil</a></li>
-                        <li><a href="Parcours.html">Mon Parcours</a></li>
-                        <li><a href="Contact.html">Contact</a></li>
-                    </ul>
-                </nav>
-        </div>
-    </header>
+<?php 
+    require "templates/header.php"
+?>
     <main class="main-parcours">
         <div class="parcours-container">
             <div class="left-side">
                 <div class="profileText">
                     <div class="imgBx">
-                        <img src="IMG_0015.jpg">
+                        <img src="resources/pictures/IMG_0015.jpg">
                     </div>
                     <h2>Maxime Le Goff<br><span>Developpeur Web</span></h2>
                 </div>
@@ -186,25 +160,19 @@
                 <div class="about interest">
                     <h2 class="title2">Centres d'intérêts</h2>
                     <ul>
-                        <li><i class="fa-solid fa-gamepad"></i>Gaming</li>
-                        <li><i class="fa-solid fa-chess"></i>Chess</li>
-                        <li><i class="fa-solid fa-shuffle"></i>Lorem</li>
+                        <li><i class="fa-solid fa-gamepad"></i>Jeux Video</li>
+                        <li><i class="fa-solid fa-chess"></i>Echecs</li>
+                        <li><i class="fa-solid fa-music"></i>Musique</li>
                         <li></li>
                     </ul>
                 </div>
             </div>
         </div>
     </main>
-
-    <footer>
-        <a href="https://www.linkedin.com/in/maxime-legoff/">
-            <span><i class="fa-brands fa-linkedin-in"></i> Linkedin</span>
-        </a>
-        <a href="https://github.com/Maxime-Le-Goff">
-            <span><i class="fa-brands fa-github"></i> Github</span>
-        </a>
-    </footer>
-    <!-- <script src="app.js"></script> -->
+    <?php 
+    require "templates/footer.php"
+?>
+<script src="resources/js/app.js"></script>
 
 </body>
 
