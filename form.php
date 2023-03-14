@@ -1,51 +1,35 @@
 <?php
-
-$errors = [];
-$errorMessage = '';
-
-if (!empty($_POST)) {
-    $firstname = $_POST['firstname'];
-    $lastname = $_POST['lastname'];
-    $email = $_POST['email'];
-    $message = $_POST['message'];
-
-   if (empty($firstname)) {
-       $errors[] = 'Le prénom est vide';
-   }
-
-   if (empty($lastname)) {
-    $errors[] = 'Le nom est vide';
+error_reporting(-1);
+ini_set('display_errors', 'On');
+set_error_handler("var_dump");
+function strip_crlf($string)
+{
+    return str_replace("\r\n", "", $string);
 }
+if (! empty($_POST)) {
+    $firstname = $_POST["firstname"];
+    $lastname = $_POST["lastname"];
+    $email = $_POST["email"];
+    $content = $_POST["content"];
 
-   if (empty($email)) {
-       $errors[] = 'L\'email est vide';
-   } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-       $errors[] = 'L\'email est invalide';
-   }
-
-   if (empty($message)) {
-       $errors[] = 'Le message est vide';
-   }
-
-   if (empty($errors)) {
-       $toEmail = 'mlgwebdev@gmail.com';
-       $emailSubject = 'C.V Contact Form';
-       $headers = ['From' => $email, 'Reply-To' => $email, 'Content-type' => 'text/html; charset=utf-8'];
-       $bodyParagraphs = ["Name: {$firstname} {$lastname}", "Email: {$email}", "Message:", $message];
-       $body = join(PHP_EOL, $bodyParagraphs);
-
-       if (mail($toEmail, $emailSubject, $body, $headers)) 
-
-           header('Location: Merci.php');
-       } else {
-           $errorMessage = 'Oops une erreur est survenue, veuillez réessayer plus tard';
-       }
-
-   } else {
-
-       $allErrors = join('<br/>', $errors);
-       $errorMessage = "<p style='color: red;'>{$allErrors}</p>";
-   }
-
-
+    $toEmail = "mlgwebdev@gmail.com";
+    // CRLF Injection attack protection
+    $firstname = strip_crlf($firstname);
+    $lastname = strip_crlf($lastname);
+    $email = strip_crlf($email);
+    if (! filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo "The email address is invalid.";
+    } else {
+        // appending \r\n at the end of mailheaders for end
+        $mailHeaders = "From: " . $firstname . $lastname . "<" . $email . ">\r\n";
+        if (mail($toEmail, 'CV', $content, $mailHeaders)) {
+            
+            $message = "Your contact information is received successfully.";
+            $type = "success";
+        } else {
+            echo 'NON';
+        }
+    }
+}
+require_once "Contact.php";
 ?>

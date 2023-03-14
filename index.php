@@ -5,12 +5,12 @@
         <section class="main-first">
             <h3 class="main_title">Site C.V de Maxime LE GOFF</h3>
                 <div class="main-first-flex">
-                    <a href="Parcours.html" class="main-first-contact">
+                    <a href="Parcours.php" class="main-first-contact">
                         <h4>Vous souhaitez en apprendre plus sur mon parcours</h4>
                         <p>Passionné du Web et des nouvelles technologies depuis des années,
                         je me suis récemment reconvertie au développement web</p>
                     </a>
-                    <a href="Contact.html" class="main-first-parcours">
+                    <a href="Contact.php" class="main-first-parcours">
                         <h4>Vous souhaitez me contacter</h4>
                     </a>
                 </div>

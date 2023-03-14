@@ -8,13 +8,22 @@
                 <div class="left"></div>
                 <div class="right">
                     <h2>Contactez-moi</h2>
-                    <form method="POST" action="form.php" id="contact-form">
+                    <form method="POST" action="form.php" id="-fcontactorm">
                     <input name="lastname" type="text" class="field" placeholder="Nom">
                     <input name="firstname" type="text" class="field" placeholder="Prénom">
                     <input name="email" type="text" class="field" placeholder="Email">
-                    <textarea name="message" placeholder="Message" class="field"></textarea>
+                    <textarea name="content" placeholder="Message" class="field"></textarea>
                     <p><input class="btn" type="submit" value="Send" /></p>
-                    </form>
+                    <div id="statusMessage"> 
+                        <?php
+                        if (! empty($message)) {
+                            ?>
+                            <p class='<?php echo $type; ?>Message'><?php echo $message; ?></p>
+                        <?php
+                        }
+                        ?>
+    
+                </form>
                 </div>
             </div>
         </div>
