@@ -1,7 +1,4 @@
 <?php
-error_reporting(-1);
-ini_set('display_errors', 'On');
-set_error_handler("var_dump");
 function strip_crlf($string)
 {
     return str_replace("\r\n", "", $string);
@@ -18,17 +15,19 @@ if (! empty($_POST)) {
     $lastname = strip_crlf($lastname);
     $email = strip_crlf($email);
     if (! filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        echo "The email address is invalid.";
+        $message= "Adresse email invalide";
+        $type = 'fail';
     } else {
         // appending \r\n at the end of mailheaders for end
         $mailHeaders = "From: " . $firstname . $lastname . "<" . $email . ">\r\n";
         if (mail($toEmail, 'CV', $content, $mailHeaders)) {
             
-            $message = "Your contact information is received successfully.";
+            $message = "Votre email a bien été envoyé.";
             $type = "success";
         } else {
-            echo 'NON';
-        }
+            $message = "Echec de l'envoi";
+            $type = "fail";
+        } 
     }
 }
 require_once "Contact.php";

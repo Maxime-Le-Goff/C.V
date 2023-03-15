@@ -19,15 +19,15 @@
                         </li>
                         <li>
                             <span class="icon"><i class="fa-solid fa-envelope"></i></span>
-                            <span class="text">mlgdev@gmail.com</span>
+                            <span class="text">mlgwebdev@gmail.com</span>
                         </li>
                         <li>
                             <span class="icon"><i class="fa-solid fa-globe"></i></span>
-                            <span class="text">urlwebsite</span>
+                            <span class="text"><a href="https://maximelgdev.fr">Mon site Web</a></span>
                         </li>
                         <li>
                             <span class="icon"><i class="fa-brands fa-linkedin"></i></span>
-                            <span class="text"><a></a>linkedin.link</span>
+                            <span class="text"><a href="https://www.linkedin.com/in/maxime-legoff/" target ="_blank">Mon linkedin</a></span>
                         </li>
                         
                     </ul>
