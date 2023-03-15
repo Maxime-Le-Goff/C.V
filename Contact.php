@@ -16,11 +16,11 @@
                     <p><input class="btn" type="submit" value="Send" /></p>
                     <div id="statusMessage"> 
                         <?php
-                        if(isset($type) && isset($message)){
+                        if(!empty($type) && !empty($message)){
 
                         
                         ?>
-                            <p class=<?php echo $type; ?><?php echo $message; ?></p>
+                            <p class='<?php echo $type; ?>'><?php echo $message; ?></p>
                         <?php
                         }
                         ?>
