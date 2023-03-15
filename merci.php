@@ -1,1 +1,0 @@
-<h1>Merci pour l'email</h1>
