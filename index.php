@@ -1,54 +1,16 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Poppins&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Mon C.V</title>
-</head>
-<body>
-    <header>
-        <div id="header">
-            <div id="header-left">
-                <h1 id="header-left-name">Le Goff Maxime</h1>
-                <h2 id="header-left-job">Développeur Web</h2>
-            </div>
-                <nav>
-                    <ul class="navbar">
-                        <li><a href="home.html">Accueil</a></li>
-                        <li><a href="Parcours.html">Mon Parcours</a></li>
-                        <li><a href="Contact.html">Contact</a></li>
-                    </ul>
-                </nav>
-
-                <div class="topnav">
-                <a href="home.html" class="active">M</a>
-                <div id="myLinks">
-                    <a href="home.html">Accueil</a>
-                    <a href="Parcours.html">Parcours</a>
-                    <a href="Contact.html">Contact</a>
-                </div>
-                <a href="javascript:void(0);" class="icon" onclick="Burger()">
-                    <i class="fa fa-bars"></i>
-                </a>
-                </div>
-        </div>
-    </header>
+<?php 
+    require "templates/header.php"
+?>
     <main class="main_home">
         <section class="main-first">
             <h3 class="main_title">Site C.V de Maxime LE GOFF</h3>
                 <div class="main-first-flex">
-                    <a href="Parcours.html" class="main-first-contact">
+                    <a href="Parcours.php" class="main-first-contact">
                         <h4>Vous souhaitez en apprendre plus sur mon parcours</h4>
                         <p>Passionné du Web et des nouvelles technologies depuis des années,
                         je me suis récemment reconvertie au développement web</p>
                     </a>
-                    <a href="Contact.html" class="main-first-parcours">
+                    <a href="Contact.php" class="main-first-parcours">
                         <h4>Vous souhaitez me contacter</h4>
                     </a>
                 </div>
@@ -81,7 +43,7 @@
                                 <a href="https://github.com/Maxime-Le-Goff" target="_blank"><i class="fa-brands fa-github"></i></a>
                                 <a href="https://www.linkedin.com/in/maxime-legoff/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                                 <p>C.V en version PDF :</p>
-                                <a href="Copie de CV.pdf" target="_blank"><i class="fa-solid fa-file-pdf"></i></a>
+                                <a href="resources/pictures/Copie de CV.pdf" target="_blank"><i class="fa-solid fa-file-pdf"></i></a>
                             </div>
                         
                     </div>
@@ -128,35 +90,28 @@
             <h2 class="title2">Différentes Technologies maitrisées : </h2>
             <div class="slider_container">
                 <div class="slider">
-                    <img class="slider_img" src="symfony.png">
+                    <img class="slider_img" src="resources/pictures/symfony.png">
                 
-                    <img class="slider_img" src="php-logo.png">
+                    <img class="slider_img" src="resources/pictures/php-logo.png">
                 
-                    <img class="slider_img" src="js.png">
+                    <img class="slider_img" src="resources/pictures/js.png">
                
-                    <img class="slider_img" src="css.png">
+                    <img class="slider_img" src="resources/pictures/css.png">
                
-                    <img class="slider_img" src="html.png">
+                    <img class="slider_img" src="resources/pictures/html.png">
                
-                    <img class="slider_img" src="sql.jpg">
+                    <img class="slider_img" src="resources/pictures/sql.jpg">
                 </div>
             </div>
         </section>
     </main>
-    <footer>
-        
-        <div class="icon_link">
-            <a href="https://www.linkedin.com/in/maxime-legoff/">
-                <span><i class="fa-brands fa-linkedin-in"></i> Linkedin</span>
-            </a>
-            <a href="https://github.com/Maxime-Le-Goff">
-                <span><i class="fa-brands fa-github"></i> Github</span>
-            </a>
-        </div>
-        <a href="Copie de CV.pdf" target="_blank"><i class="fa-solid fa-file-pdf"></i>C.V version P.D.F</a>
-    </footer>
 
-<script src="app.js"></script>
+    <?php 
+    require "templates/footer.php"
+    ?>
+<script src="resources/js/app.js"></script>
+<script src="resources/js/home.js"></script>
+
 
 </body>
 </html>

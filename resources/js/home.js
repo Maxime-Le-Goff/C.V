@@ -39,12 +39,3 @@ document.querySelector('.Card_add').addEventListener('click',() => {
     itemCard.classList.replace('fa-plus','fa-minus');
   }
 })
-
-function Burger() {
-  var x = document.getElementById("myLinks");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
-}
