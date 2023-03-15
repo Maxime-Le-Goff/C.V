@@ -20,7 +20,7 @@
 
                         
                         ?>
-                            <p class='<?php echo $type; ?>Message'<?php echo $message; ?></p>
+                            <p class=<?php echo $type; ?><?php echo $message; ?></p>
                         <?php
                         }
                         ?>
