@@ -18,6 +18,10 @@ import tailwind from "./tech/tailwind.png";
 import php from './tech/php.png';
 import mongodb from './tech/mongodb.png'
 import symfony from './tech/symfony.png'
+import nextJS from './tech/nextJS.png'
+import mySQL from './tech/mySQL.png'
+import typecript from './tech/typescript.png'
+
 
 import meta from "./company/meta.png";
 import shopify from "./company/shopify.png";
@@ -55,4 +59,7 @@ export {
   php,
   symfony,
   photo,
+  typecript,
+  mySQL,
+  nextJS,
 };

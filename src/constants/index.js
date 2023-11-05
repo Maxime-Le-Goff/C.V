@@ -13,7 +13,10 @@ import {
     php,
     symfony,
     metaverse,
-    sophrology
+    sophrology,
+    mySQL,
+    nextJS,
+    typecript
     
 } from '../assets/index'
 
@@ -116,7 +119,7 @@ const technologies = [
     },
     {
       name: "MySQL",
-      icon: mongodb,
+      icon: mySQL,
     },
     {
       name: "git",
@@ -127,9 +130,17 @@ const technologies = [
       icon: php,
     },
     {
-        name: "Symfony",
-        icon: symfony,
-      },
+      name: "Symfony",
+      icon: symfony,
+    },
+    {
+      name: "NextJS",
+      icon: nextJS,
+    },
+    {
+      name: "Typescript",
+      icon: typecript,
+    },
   ];
 
   const projects = [
