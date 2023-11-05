@@ -155,7 +155,7 @@ return (
             variants={navVariants}
             initial="hidden"
             whileInView="show"
-            className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 bg-success py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
+            className="absolute bottom-10 left-0 -translate-x-1/2 translate-y-1/2 bg-success py-3 px-8 rounded-xl outline-none w-full text-white font-bold shadow-md shadow-primary"
           >
           Email successfully sent
           </motion.p>
@@ -165,7 +165,7 @@ return (
             variants={navVariants}
             initial="hidden"
             whileInView="show"
-            className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 bg-alert py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
+            className="absolute bottom-10 left-0 -translate-x-1/2 translate-y-1/2 bg-alert py-3 px-8 rounded-xl outline-none w-full text-white font-bold shadow-md shadow-primary"
           >
           An error Occurred
           </motion.p>
@@ -175,7 +175,7 @@ return (
             variants={navVariants}
             initial="hidden"
             whileInView="show"
-            className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 bg-alert py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
+            className="absolute bottom-10 left-0 -translate-x-1/2 translate-y-1/2 bg-alert py-3 px-8 rounded-xl outline-none w-full text-white font-bold shadow-md shadow-primary"
           >
           Please fill out all required fields
           </motion.p>
@@ -196,9 +196,9 @@ return (
             Le Plessis-Robinson
             <br />
             <span
-              className="mt-2.5 green-text-gradient"
+              className="mt-2.5 purple-text-gradient"
             >
-            lgmaximemlg@gmail.com</span>
+            mlgwebdev@gmail.com</span>
       </div>
         <MapContainer 
           center={[48.780991, 2.260808]}
@@ -211,7 +211,6 @@ return (
           <Marker
             position={[48.780991, 2.260808]}
           >
-            <Popup>I Live Here</Popup>
           </Marker>
         </MapContainer>
       </motion.div>

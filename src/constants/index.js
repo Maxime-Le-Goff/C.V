@@ -16,7 +16,9 @@ import {
     sophrology,
     mySQL,
     nextJS,
-    typecript
+    typecript,
+    esp,
+    sneakSpot
     
 } from '../assets/index'
 
@@ -185,8 +187,52 @@ const technologies = [
         },
       ],
       image: metaverse,
-      source_code_link: "https://github.com/",
-      website_link:"#"
+      source_code_link: "https://github.com/Maxime-Le-Goff/Modern-type-website",
+      website_link:"https://metaverse.maximelgdev.fr/"
+    },
+    {
+      name: "Easy-Sports-Test",
+      description:
+        "This application provides the user with some tools to register the results of physical test and display them with charts",
+      tags: [
+        {
+          name: "symfony",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "Javascript",
+          color: "green-text-gradient",
+        },
+        {
+          name: "bootstrap",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: esp,
+      source_code_link: "https://github.com/O-clock-Yuna/projet-20-easy-sports-tests",
+      website_link:null
+    },
+    {
+      name: "SneakSpot",
+      description:
+        "This e-commerce application allows users to search the right sneaker using different filters like price or brand and then purchase those items using Stripe ",
+      tags: [
+        {
+          name: "symfony",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "React",
+          color: "green-text-gradient",
+        },
+        {
+          name: "tailwind",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: sneakSpot,
+      source_code_link: "https://github.com/Maxime-Le-Goff/Sneakspot-front",
+      website_link:"https://sneakspot.maximelgdev.fr/"
     },
   ];
 export { navLinks, services, experiences, technologies, projects } ;

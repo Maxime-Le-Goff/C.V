@@ -7,14 +7,21 @@ import { github } from "../assets";
 import AnimatedLetters from "./AnimatedLetters";
 
 const ProjectCard = ({ index, name, description, tags, image, source_code_link, website_link }) => (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+    <motion.div 
+      variants={fadeIn("up", "spring", index * 0.5, 0.75)} 
+      onClick={() => {
+        if(website_link !== null) {
+        window.open(website_link, "_blank")
+      }
+      }}
+    >
       <Tilt
         options={{
           max: 45,
           scale: 1,
           speed: 450,
         }}
-        className='bg-tertiary p-5 rounded-2xl md:w-[350px] justify-center w-full h-[450px]'
+        className='bg-tertiary p-5 rounded-2xl md:w-[350px] justify-center w-full h-[450px] cursor-pointer'
       >
         <div className='relative w-full h-[230px]'>
           <img
@@ -40,9 +47,7 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link, 
         <div className='mt-5'>
           <h3 
             className='text-white font-bold text-[24px] cursor-pointer'
-            onClick={() => {
-              window.open(website_link, "_blank")
-            }}
+            
           >{name}</h3>
           <p className='mt-2 text-secondary text-[14px]'>{description}</p>
         </div>

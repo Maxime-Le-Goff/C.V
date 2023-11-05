@@ -1,4 +1,4 @@
-import logo from "./mlg-logo.png";
+import logo from "./mlg-logo-zip-file/svg/logo-no-background.svg";
 import backend from "./backend.png";
 import creator from "./creator.png";
 import mobile from "./mobile.png";
@@ -31,6 +31,8 @@ import tesla from "./company/tesla.png";
 import sophrology from "./Sophrology.png";
 import metaverse from "./Metaverse.png";
 import tripguide from "./tripguide.png";
+import esp from "./ESP.png";
+import sneakSpot from './sneakSpot.png'
 
 export {
   logo,
@@ -62,4 +64,6 @@ export {
   typecript,
   mySQL,
   nextJS,
+  esp,
+  sneakSpot
 };
