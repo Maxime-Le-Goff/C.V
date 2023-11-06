@@ -23,7 +23,7 @@
   animation:rubberband 1s;
 }
 
-.box{ background:url('src/assets/photo.jpg');
+.box{ background:url('/assets/photo-69d9267f.jpg');
   background-size:cover;
   aspect-ratio:1;
   background-position:center center;
