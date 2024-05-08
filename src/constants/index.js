@@ -82,13 +82,25 @@ const experiences = [
         ],
     },
     {
+      title:'Self-training',
+      company_name: '',
+      icon: mobile,
+      iconBg: "#E6DEDD",
+      date: "October 2022-January 2023",
+      points: [
+      "Learning new frameworks: React, O'Clock specialization module ",
+      "NextJS and Typescript through their documentation"
+      ],
+  },
+    {
         title:'Freelance Web Developer',
         company_name: 'MLG',
         icon: mobile,
         iconBg: "#383E56",
-        date: "August 2023 - Present",
+        date: "January 2023 - December 2023",
         points: [
         "Starting as a freelance full-stack developer.",
+        "Building different projects using mainly React, Symfony and NextJS"
         ],
     }
 ];
@@ -210,7 +222,7 @@ const technologies = [
       ],
       image: esp,
       source_code_link: "https://github.com/O-clock-Yuna/projet-20-easy-sports-tests",
-      website_link:null
+      website_link:"https://easysportstest.maximelgdev.fr/"
     },
     {
       name: "SneakSpot",
