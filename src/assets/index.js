@@ -32,7 +32,8 @@ import sophrology from "./Sophrology.png";
 import metaverse from "./Metaverse.png";
 import tripguide from "./tripguide.png";
 import esp from "./ESP.png";
-import sneakSpot from './sneakSpot.png'
+import sneakSpot from './sneakSpot.png';
+import spotify from './spotify.png';
 
 export {
   logo,
@@ -65,5 +66,6 @@ export {
   mySQL,
   nextJS,
   esp,
-  sneakSpot
+  sneakSpot,
+  spotify
 };

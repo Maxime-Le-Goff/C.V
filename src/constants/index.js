@@ -18,7 +18,8 @@ import {
     nextJS,
     typecript,
     esp,
-    sneakSpot
+    sneakSpot,
+    spotify
     
 } from '../assets/index'
 
@@ -245,6 +246,28 @@ const technologies = [
       image: sneakSpot,
       source_code_link: "https://github.com/Maxime-Le-Goff/Sneakspot-front",
       website_link:"https://sneakspot.maximelgdev.fr/"
+    },
+    {
+      name: "Spotify-Clone",
+      description:
+        "This application allow users to add their own music to the website, to listen to this music and music from others aswell as adding songs to their favorites ",
+      tags: [
+        {
+          name: "NextJs",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "Supabase",
+          color: "green-text-gradient",
+        },
+        {
+          name: "tailwind",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: spotify,
+      source_code_link: "https://github.com/Maxime-Le-Goff/Spotify-clone",
+      website_link:"https://spotify-clone-bqur.vercel.app/"
     },
   ];
 export { navLinks, services, experiences, technologies, projects } ;
